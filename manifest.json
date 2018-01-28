@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "bilibili专栏文字复制",
+    "version": "1.0",
+    "description": "可以复制bilibili专栏中的文字",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.bilibili.com/read/cv*"],
+            "js": ["js/usejq.js"]
+        }
+    ]
+}
