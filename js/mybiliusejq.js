@@ -660,3 +660,7 @@
         Kt = e.$; return w.noConflict = function(t) { return e.$ === w && (e.$ = Kt), t && e.jQuery === w && (e.jQuery = Jt), w }, t || (e.jQuery = e.$ = w), w });
 $('.article-holder').removeClass('unable-reprint');
 setTimeout(function() {$('.bilibili-player-promote-wrap').fadeOut();}, 3000);
+$('.video-bottom-ad').remove();
+$('.video-top-ad').remove();
+// setTimeout(function() {$('.video-top-ad').remove();}, 3000);
+// setTimeout(function() {$('.video-top-ad').fadeOut();}, 3000);
