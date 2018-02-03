@@ -6,12 +6,15 @@ setTimeout(function() {$('.bilibili-player-promote-wrap').fadeOut();}, 3000);
 $('.video-bottom-ad').remove();
 $('.video-top-ad').remove();
 
-// 在下面一行按格式添加直播间号
-var fbd = /.*?(1327829|18727|5025|5389469|2302976|470181|278320|10101|470181)\?from.*?/;
-
-for (var i = 0; i <= 39; i++){
-    var roomurl = $('.room-item').eq(i).find('a').attr('href');
-    if (fbd.test(roomurl)){
-        $('.room-item').eq(i).css('opacity','0.1');
+// 在下面一行按格式增删直播间号
+var fbd = /.*?(1327829|18727|5025|5389469|2302976|470181|278320|10101|470181|4546456|3832624|8774845|507603|3565876|6949104|5291856|18964|4512257|5780166|29922|82594|54843|828169|5506942|870574)\?from.*?/;
+function fbdlive(){
+    for (var i = 0; i <= 39; i++){
+        var roomurl = $('.room-item').eq(i).find('a').attr('href');
+        if (fbd.test(roomurl)){
+            $('.room-item').eq(i).remove();
+        }
     }
 }
+$(fbdlive());
+window.ready(fbdlive());
